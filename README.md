@@ -54,7 +54,7 @@ A summary of the access policies in place can be found in the table below.
 
 | Name                | Publicly Accessible | Allowed IP Addresses |
 |---------------------|---------------------|----------------------|
-| Jump Box            | YES                 | 10.0.0.4             |
+| Jump Box            | YES                 | 40.6.217.125         |
 | ELK-Server          | NO                  | 10.1.0.4             |
 | Web-1               | NO                  | 10.0.0.5             |
 | Web-2               | NO                  | 10.0.0.6             |
@@ -134,3 +134,6 @@ SSH into the control node and follow the steps below:
 
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+
+Some Commands to use to help you with starting the download of the playbooks are as follows:
+  -
