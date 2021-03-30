@@ -22,14 +22,14 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly stable, in addition to restricting traffic to the network.
-- The primary function of a load balancer is to spread workloads across multiple servers to prevent overloading servers, optimize productivityand maximize uptime. Load balancing also provides the ability to addl and remove instances without causing any disruption to incoming traffic.
+- The primary function of a load balancer is to spread workloads across multiple servers to prevent overloading servers, optimize productivity and maximize uptime. Load balancing also provides the ability to add and remove instances without causing any disruption to incoming traffic.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the log and system files.
 - Filebeat will monitor the VMs by generating and organizing log files. Specifically, it logs information about the file system, including which files have changed and when
 - Metricbeat will monitor the VMs by periodically collecting metrics from the operating system and from services running on the server.
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
+#_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name       | Function | IP Address | Operating System |
 |----------  |----------|------------|------------------|
@@ -54,9 +54,11 @@ A summary of the access policies in place can be found in the table below.
 
 | Name                | Publicly Accessible | Allowed IP Addresses |
 |---------------------|---------------------|----------------------|
-| Jump Box            | Yes/No              | 10.0.0.1 10.0.0.2    |
-| /images/SSHAccess   |                     |                      |
-| /Images/Jump-Box-ip |                     |                      |
+| Jump Box            | YES                 | 10.0.0.4             |
+| ELK-Server          | NO                  | 10.1.0.4             |
+| Web-1               | NO                  | 10.0.0.5             |
+| Web-2               | NO                  | 10.0.0.6             |
+| Web-3               | NO                  | 10.0.0.7             |
 
 ### Elk Configuration
 
