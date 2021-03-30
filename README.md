@@ -92,7 +92,7 @@ We have installed the following Beats on these machines:
 - Metricbeat
 
 These Beats allow us to collect the following information from each machine:
-#_TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+* _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
 
 **FileBeat monitors and logs files or locations that you specify, to relay the information to Elasticsearch or Logstash for review
 
@@ -121,9 +121,9 @@ SSH into the control node and follow the steps below:
 
 - Run the playbook, and navigate to 10.0.0.5 to check that the installation worked as expected.
 
-#_TODO: Answer the following questions to fill in the blanks:_
-#_Which file is the playbook? Where do you copy it?_
-#_Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
+* _TODO: Answer the following questions to fill in the blanks:_
+* _Which file is the playbook? Where do you copy it?_
+* _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
 - Run the playbook and navigateto 10.0.0.5 andcurl localhost/setup.php to check that the installation is running as expected.
 
 - Check to make sure the ELK server is running:
@@ -134,7 +134,7 @@ SSH into the control node and follow the steps below:
 [Kibana](Images/Kibana.PNG)
 
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+* _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
 
 ## Downloading playbooks on your Machine
 
