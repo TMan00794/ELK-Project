@@ -136,10 +136,10 @@ SSH into the control node and follow the steps below:
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
 
-##### Downloading playbooks on your Machine
+## Downloading playbooks on your Machine
 
 
-## Installing Filebeat on the DVWA Container
+### Installing Filebeat on the DVWA Container
   - Navigate to http://[your.VM.IP]:5601/app/kibana. Use the public IP address of the ELK server that you created.
   - If you do not see the ELK server landing page, open a terminal on your computer and SSH into the ELK server.
   - Run docker container list -a to verify that the container is on.
@@ -151,7 +151,7 @@ _As a **Bonus**, provide the specific commands the user will need to run to down
     Click on the DEB tab under Getting Started to view the correct Linux Filebeat installation instructions.
 
 
-## Creating the Filebeat Configuration File
+### Creating the Filebeat Configuration File
   - Create a Filebeat configuration file and edit this file so that it has the correct settings to work with your ELK server.
   - Open a terminal and SSH into your jump box:
   - Start the Ansible container.
@@ -161,7 +161,7 @@ _As a **Bonus**, provide the specific commands the user will need to run to down
   - Using curl is a better way to avoid errors and we have the file hosted for public download HERE
 
 
-## Setting up your Playbooks
+### Setting up your Playbooks
   - 1.) SSH into your Virtual machine using (ssh <Username_on_machine>@<IP_address_of_Machine>)
   - 2.) Locate your container and making sure the container is running (docker container list -a)
           -if it isn't running: (docker start <name_of_your_machine>)
