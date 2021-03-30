@@ -1,8 +1,9 @@
 ## Automated ELK Stack Deployment
 
-The files in this repository were used to configure the network depicted below.
 
 ![ELK-Diagram](Images/ELK_Diagram.png)
+
+The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Playbook file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -84,12 +85,11 @@ This ELK server is configured to monitor the following machines:
 - Web-1 10.0.0.5
 - Web-2 10.0.0.6
 - Web-3 10.0.0.7
-- Elk-Server 10.1.0.4 /Images/Network Interfaces
+- Elk-Server 10.1.0.4
 
 We have installed the following Beats on these machines:
 - Filebeat  
 - Metricbeat
- -delete me
 
 These Beats allow us to collect the following information from each machine:
 #_TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
@@ -136,5 +136,41 @@ SSH into the control node and follow the steps below:
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
 
-### Downloading playbooks on your Machine
-  - 1.)
+##### Downloading playbooks on your Machine
+
+
+## Installing Filebeat on the DVWA Container
+  - Navigate to http://[your.VM.IP]:5601/app/kibana. Use the public IP address of the ELK server that you created.
+  - If you do not see the ELK server landing page, open a terminal on your computer and SSH into the ELK server.
+  - Run docker container list -a to verify that the container is on.
+  - If it isn't, run docker start elk.
+  - Install Filebeat on your DVWA VM:
+  - Open your ELK server homepage.
+  - Click on Add Log Data.
+    Choose System Logs.
+    Click on the DEB tab under Getting Started to view the correct Linux Filebeat installation instructions.
+
+
+## Creating the Filebeat Configuration File
+  - Create a Filebeat configuration file and edit this file so that it has the correct settings to work with your ELK server.
+  - Open a terminal and SSH into your jump box:
+  - Start the Ansible container.
+  - SSH into the Ansible container.
+  - Copy the provided configuration file for Filebeat to your Ansible container: Filebeat Configuration File Template.
+  - Note that when text is copy and pasted from the web into your terminal, formatting differences are likely to occur that will corrupt this configuration file.
+  - Using curl is a better way to avoid errors and we have the file hosted for public download HERE
+
+
+## Setting up your Playbooks
+  - 1.) SSH into your Virtual machine using (ssh <Username_on_machine>@<IP_address_of_Machine>)
+  - 2.) Locate your container and making sure the container is running (docker container list -a)
+          -if it isn't running: (docker start <name_of_your_machine>)
+  - 3.) After that you should be in your container if your username is (<root@<random_characters>:)
+  - 4.) Next 'cd' into your /etc/ansible directory.
+  - 5.) Install the .deb file using the dpkg command:
+          - dpkg -i filebeat-7.4.0-amd64.deb1
+  - 6.) Run the 'filebeat modules enablesystem' command
+  - 7.) Run the 'filebeat setup' command
+  - 8.) Run the 'sevice filebeat start' command
+  - 9.) Run your command to start your installation of your playbook (ansible-playbook filebeat-playbook.yml)
+  - 10.) After this is done your playbook should be all set and ready to go!
