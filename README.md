@@ -116,7 +116,7 @@ SSH into the control node and follow the steps below:
   - 10.0.0.7 ansible_python_interpreter=/usr/bin/python3
   - [elk]
 
-![Hosts Configuration](Images/Hosts.PNG)
+[Hosts Configuration](Images/Hosts.PNG)
 
 - Run the playbook, and navigate to 10.0.0.5 to check that the installation worked as expected.
 
@@ -130,7 +130,7 @@ SSH into the control node and follow the steps below:
   - Kibana Application:
 
 
-![Kibana](Images/Kibana.PNG)
+[Kibana](Images/Kibana.PNG)
 
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
