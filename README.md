@@ -72,11 +72,11 @@ The playbooks implement the following tasks:
 - .Increased and set memory to 262144
 - .Download and launch docker elk container:761  
 
-![ELK Installation](Images/InstallingELK.PNG)
+[ELK Installation](Images/InstallingELK.PNG)
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![Docker PS](Images/DockerPS.PNG)
+[Docker PS](Images/DockerPS.PNG)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
