@@ -29,7 +29,8 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 - Metricbeat will monitor the VMs by periodically collecting metrics from the operating system and from services running on the server.
 
 The configuration details of each machine may be found below.
-#_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
+
+# _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name       | Function | IP Address | Operating System |
 |----------  |----------|------------|------------------|
@@ -135,5 +136,5 @@ SSH into the control node and follow the steps below:
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
 
-Some Commands to use to help you with starting the download of the playbooks are as follows:
-  -
+### Downloading playbooks on your Machine
+  - 1.)
