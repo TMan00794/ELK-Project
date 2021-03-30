@@ -70,9 +70,11 @@ The playbooks implement the following tasks:
 - .Increased and set memory to 262144
 - .Download and launch docker elk container:761  
 
+![ELK Installation](Images/InstallingELK.PNG)
+
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![ELK Installation](Images/InstallingELK.PNG)
+![Docker PS](Images/DockerPS.PNG)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -88,6 +90,16 @@ We have installed the following Beats on these machines:
 
 These Beats allow us to collect the following information from each machine:
 - _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+
+**FileBeat monitors and logs files or locations that you specify, to relay the information to Elasticsearch or Logstash for review
+
+[Filebeat Configuration](Ansible/filebeat-configuratioin.yml)
+[Filebeat Playbook](Ansible/filebeat-playbook.yml)
+
+**Metricbeat records the metrics and statistics for uptime, and moves that information that you specify like Elasticsearch or Logstash
+
+[Metricbeat Configuration](Ansible/metricbeat-config-file.yml)
+[Metricbeat Playbook](Ansible/metricbeat-playbook.yml)
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned:
