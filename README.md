@@ -93,15 +93,15 @@ These Beats allow us to collect the following information from each machine:
 
 **FileBeat monitors and logs files or locations that you specify, to relay the information to Elasticsearch or Logstash for review
 
-1.[Filebeat Configuration](Ansible/filebeat-configuratioin.yml)
+1. [Filebeat Configuration](Ansible/filebeat-configuratioin.yml)
 
-2.[Filebeat Playbook](Ansible/filebeat-playbook.yml)
+2. [Filebeat Playbook](Ansible/filebeat-playbook.yml)
 
 **Metricbeat records the metrics and statistics for uptime, and moves that information that you specify like Elasticsearch or Logstash
 
-1.[Metricbeat Configuration](Ansible/metricbeat-config-file.yml)
+1. [Metricbeat Configuration](Ansible/metricbeat-config-file.yml)
 
-2.[Metricbeat Playbook](Ansible/metricbeat-playbook.yml)
+2. [Metricbeat Playbook](Ansible/metricbeat-playbook.yml)
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned:
