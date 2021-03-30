@@ -137,13 +137,11 @@ SSH into the control node and follow the steps below:
 ### Installing Filebeat on the DVWA Container
   - Navigate to http://[your.VM.IP]:5601/app/kibana. Use the public IP address of the ELK server that you created.
   - If you do not see the ELK server landing page, open a terminal on your computer and SSH into the ELK server.
-  - Run docker container list -a to verify that the container is on.
-  - If it isn't, run docker start elk.
   - Install Filebeat on your DVWA VM:
-  - Open your ELK server homepage.
-  - Click on Add Log Data.
-    Choose System Logs.
-    Click on the DEB tab under Getting Started to view the correct Linux Filebeat installation instructions.
+      - Open your ELK server homepage.
+      - Click on Add Log Data.
+      - Choose System Logs.
+      - Click on the DEB tab under Getting Started to view the correct Linux Filebeat installation instructions.
 
 
 ### Creating the Filebeat Configuration File
@@ -153,19 +151,19 @@ SSH into the control node and follow the steps below:
   - SSH into the Ansible container.
   - Copy the provided configuration file for Filebeat to your Ansible container: Filebeat Configuration File Template.
   - Note that when text is copy and pasted from the web into your terminal, formatting differences are likely to occur that will corrupt this configuration file.
-  - Using curl is a better way to avoid errors and we have the file hosted for public download HERE
+  - Using curl is a better way to avoid errors and we have the file hosted for public download [HERE](Ansible/filebeat-configuration.yml)
 
 
 ### Setting up your Playbooks
-  - 1.) SSH into your Virtual machine using (ssh <Username_on_machine>@<IP_address_of_Machine>)
-  - 2.) Locate your container and making sure the container is running (docker container list -a)
+  -  SSH into your Virtual machine using (ssh <Username_on_machine>@<IP_address_of_Machine>)
+  -  Locate your container and making sure the container is running (docker container list -a)
           -if it isn't running: (docker start <name_of_your_machine>)
-  - 3.) After that you should be in your container if your username is (<root@<random_characters>:)
-  - 4.) Next 'cd' into your /etc/ansible directory.
-  - 5.) Install the .deb file using the dpkg command:
+  -  After that you should be in your container if your username is (<root@<random_characters>:)
+  -  Next 'cd' into your /etc/ansible directory.
+  -  Install the .deb file using the dpkg command:
           - dpkg -i filebeat-7.4.0-amd64.deb1
-  - 6.) Run the 'filebeat modules enablesystem' command
-  - 7.) Run the 'filebeat setup' command
-  - 8.) Run the 'sevice filebeat start' command
-  - 9.) Run your command to start your installation of your playbook (ansible-playbook filebeat-playbook.yml)
-  - 10.) After this is done your playbook should be all set and ready to go!
+  -  Run the 'filebeat modules enablesystem' command
+  -  Run the 'filebeat setup' command
+  -  Run the 'sevice filebeat start' command
+  -  Run your command to start your installation of your playbook (ansible-playbook filebeat-playbook.yml)
+  -  After this is done your playbook should be all set and ready to go!
