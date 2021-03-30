@@ -6,7 +6,7 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Playbook file may be used to install only certain pieces of it, such as Filebeat.
 
-  [Ansible Playbook] (Ansible/ansible-playbook.yml)
+[Ansible Playbook](Ansible/ansible-playbook.yml)
 
 This document contains the following details:
 - Description of the Topologu
@@ -21,10 +21,10 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly _____, in addition to restricting _____ to the network.
+Load balancing ensures that the application will be highly stable, in addition to restricting traffic to the network.
 - The primary function of a load balancer is to spread workloads across multiple servers to prevent overloading servers, optimize productivityand maximize uptime. Load balancing also provides the ability to addl and remove instances without causing any disruption to incoming traffic.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the log and system files.
 - Filebeat will monitor the VMs by generating and organizing log files. Specifically, it logs information about the file system, including which files have changed and when
 - Metricbeat will monitor the VMs by periodically collecting metrics from the operating system and from services running on the server.
 
@@ -45,9 +45,9 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 The machines on the internal network are not exposed to the public Internet.
 
 Only the Jump-Box Machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- 216.26.121.101
+- <My Public IP>
 
-Machines within the network can only be accessed by _____.
+Machines within the network can only be accessed by Jump-Box VM.
 - 40.76.217.125
 
 A summary of the access policies in place can be found in the table below.
