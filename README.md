@@ -109,19 +109,25 @@ In order to use the playbook, you will need to have an Ansible control node alre
 SSH into the control node and follow the steps below:
 - Copy the playbook file to /etc/ansible.
 - Update the hosts file to include each VM Client IP address (10.0.0.5-10.0.0.7)
+  - 10.0.0.5 ansible_python_interpreter=/usr/bin/python3
+  - 10.0.0.6 ansible_python_interpreter=/usr/bin/python3
+  - 10.0.0.7 ansible_python_interpreter=/usr/bin/python3
+  - [elk]
 
 ![Hosts Configuration](Images/Hosts.PNG)
 
 - Run the playbook, and navigate to 10.0.0.5 to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
+#_TODO: Answer the following questions to fill in the blanks:_
+#_Which file is the playbook? Where do you copy it?_
+#_Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
 - Run the playbook and navigateto 10.0.0.5 andcurl localhost/setup.php to check that the installation is running as expected.
 
 - Check to make sure the ELK server is running:
   - Public IP on port 5601 (52.165.160.73:5601/app/kibana#/home)
   - Kibana Application:
+
+
 ![Kibana](Images/Kibana.PNG)
 
 
