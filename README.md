@@ -54,13 +54,13 @@ Machines within the network can only be accessed by Jump-Box VM.
 
 A summary of the access policies in place can be found in the table below.
 
-| Name                | Publicly Accessible | Allowed IP Addresses |
-|---------------------|---------------------|----------------------|
-| Jump Box            | YES                 | 40.6.217.125         |
-| ELK-Server          | NO                  | 10.1.0.4             |
-| Web-1               | NO                  | 10.0.0.5             |
-| Web-2               | NO                  | 10.0.0.6             |
-| Web-3               | NO                  | 10.0.0.7             |
+| Name                | Publicly Accessible | Allowed IP Addresses     |
+|---------------------|---------------------|--------------------------|
+| Jump Box            | YES                 | <Public_IP_For_Jump-Box> |
+| ELK-Server          | NO                  | 10.1.0.4                 |
+| Web-1               | NO                  | 10.0.0.5                 |
+| Web-2               | NO                  | 10.0.0.6                 |
+| Web-3               | NO                  | 10.0.0.7                 |
 
 ### Elk Configuration
 
@@ -123,7 +123,7 @@ SSH into the control node and follow the steps below:
 - Run the playbook and navigateto 10.0.0.5 andcurl localhost/setup.php to check that the installation is running as expected.
 
 - Check to make sure the ELK server is running:
-  - Public IP on port 5601 (52.165.160.73:5601/app/kibana#/home)
+  - Public IP on port 5601 (<My_VM'sPublic_IP>:5601/app/kibana#/home)
   - Kibana Application:
 
 
